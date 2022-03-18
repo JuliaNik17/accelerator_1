@@ -1,0 +1,56 @@
+.contacts-list__item {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.contacts-list__item a {
+  display: block;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: $dark-blue;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 30px;
+
+  @include vp-1023 {
+    padding-left: 29px;
+  }
+}
+
+.contacts-list__item br {
+  display: none;
+
+  @include vp-1023 {
+    display: block;
+  }
+}
+
+.contacts-list__item--adress::before {
+  content: "";
+  background-image: url("../img/sprite/place_icon.svg");
+  position: absolute;
+  width: 18px;
+  height: 22px;
+  top: 0;
+  left: 2px;
+
+  @include vp-1023 {
+    top: 5px;
+    left: 0;
+  }
+}
+
+.contacts-list__item--phone::before {
+  content: "";
+  background-image: url("../img/sprite/phone_icon.svg");
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 0;
+  left: 2px;
+
+  @include vp-1023 {
+    top: 3px;
+    left: 0;
+  }
+}

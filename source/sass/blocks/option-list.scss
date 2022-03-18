@@ -1,0 +1,101 @@
+.option-list__item {
+  background-color: $light-beige;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 62px;
+}
+
+.option-list__item--ship {
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/sprite/ship_icon.svg");
+    width: 27px;
+    height: 32px;
+    top: 30px;
+    left: 30px;
+
+    @include vp-1023 {
+      background-image: url("../img/sprite/ship_icon_tablet.svg");
+      width: 21px;
+      height: 26px;
+      top: 25px;
+      left: 20px;
+    }
+  }
+}
+
+.option-list__item--all-inclusive {
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/sprite/all_inclusive_icon.svg");
+    width: 38px;
+    height: 21px;
+    top: 35px;
+    left: 30px;
+
+    @include vp-1023 {
+      background-image: url("../img/sprite/all_inclusive_icon_tablet.svg");
+      width: 33px;
+      height: 19px;
+      top: 29px;
+      left: 20px;
+    }
+  }
+}
+
+.option-list__item--boat {
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/sprite/boat_icon.svg");
+    width: 42px;
+    height: 15px;
+    top: 37px;
+    left: 30px;
+
+    @include vp-1023 {
+      background-image: url("../img/sprite/boat_icon_tablet.svg");
+      width: 38px;
+      height: 13px;
+      top: 32px;
+      left: 20px;
+    }
+  }
+}
+
+.option-list__head {
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: $dark-blue;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 8px;
+  margin-left: 30px;
+
+  @include vp-1023 {
+    line-height: 25px;
+    margin-top: 8px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.option-list__text {
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: $dark-blue;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 30px 25px;
+
+  @include vp-1023 {
+    margin: 0 15px 18px 20px;
+  }
+}
+
+.option-list__item br {
+  display: none;
+}

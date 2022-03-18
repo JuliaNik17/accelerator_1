@@ -1,0 +1,63 @@
+.booking-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-info__head {
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: $dark-blue;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  margin: 161px 60px 0 15px;
+
+  @include vp-1023 {
+    font-size: 34px;
+    line-height: 51px;
+    margin: 38px 0 0;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+  }
+}
+
+.booking-info__text {
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: $dark-blue;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  margin-top: 10px;
+  margin-left: 15px;
+
+  @include vp-1023 {
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    margin: 5px 0 52px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    margin: 15px 16px 34px;
+  }
+}
+
+.booking-info__break {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.booking-info__mob {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}

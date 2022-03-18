@@ -1,0 +1,29 @@
+.social__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social__link {
+  display: block;
+}
+
+.social__link--facebook {
+  padding-right: 35px;
+
+  @include vp-767 {
+    padding-right: 20px;
+  }
+}
+
+.social__link--instagram {
+  padding-right: 35px;
+
+  @include vp-767 {
+    padding-right: 20px;
+  }
+}

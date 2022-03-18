@@ -1,0 +1,34 @@
+.page-header {
+  color: $light-beige;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  align-items: center;
+  z-index: 2;
+}
+
+.page-header__wrapper {
+  max-width: 1170px;
+  margin: 35px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include vp-1023 {
+    max-width: 690px;
+    margin: 30px auto;
+  }
+
+  @include vp-767 {
+    width: 320px;
+    margin: 20px auto;
+  }
+}
+
+.page-header__logo {
+  padding-left: 13px;
+
+  @include vp-767 {
+    display: none;
+  }
+}

@@ -1,0 +1,44 @@
+.site-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+
+  @include vp-767 {
+    background-color: $light-beige;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-bottom: 230px;
+  }
+}
+
+.site-list__item a {
+  color: $light-beige;
+  font-weight: 500;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  padding-right: 33px;
+
+  @include vp-1023 {
+    font-size: 14px;
+    line-height: 17px;
+    padding-right: 23px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    color: $dark-blue;
+    font-size: 18px;
+    line-height: 22px;
+    display: block;
+    padding: 10px 39px 8px 10px;
+  }
+}
+
+.site-list__item:nth-child(4n) a {
+  padding-right: 0;
+}

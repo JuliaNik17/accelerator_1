@@ -1,0 +1,34 @@
+.cruise-list {
+  max-width: 1140px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 386px 386px;
+  grid-gap: 30px;
+
+  @include vp-1023 {
+    max-width: 658px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 386px 386px 386px 386px;
+  }
+
+  @include vp-767 {
+    width: 270px;
+    padding-left: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 386px 386px 386px 386px 386px 386px 386px 386px;
+  }
+}
+
+.cruise-list__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &:hover .cruise-info {
+    z-index: 10;
+  }
+}

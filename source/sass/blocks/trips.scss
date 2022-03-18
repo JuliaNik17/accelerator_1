@@ -1,0 +1,29 @@
+.trips {
+  width: 100%;
+  margin: 0;
+}
+
+.trips__wrapper {
+  display: grid;
+  grid-template-columns: 540px 560px;
+  grid-gap: 77px;
+  width: 1180px;
+  margin: 120px auto;
+
+  @include vp-1023 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 690px;
+    margin: 83px auto 80px;
+    grid-template-columns: none;
+    grid-gap: 0;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    width: 290px;
+    margin: 50px auto 65px;
+  }
+}

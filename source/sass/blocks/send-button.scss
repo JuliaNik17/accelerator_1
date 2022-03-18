@@ -1,0 +1,21 @@
+.send-button {
+  border: none;
+  background-color: $light-beige;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: $dark-blue;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 10px 87px 10px 90px;
+  margin-top: 25px;
+
+  @include vp-1023 {
+    margin-top: 23px;
+    padding-right: 89px;
+  }
+
+  @include vp-767 {
+    margin-top: 0;
+    padding: 13px 53px;
+  }
+}

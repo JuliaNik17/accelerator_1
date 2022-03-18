@@ -1,0 +1,80 @@
+.cruise-info {
+  display: flex;
+  height: 100%;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: $dark-blue;
+  padding-top: 28px;
+  padding-left: 27px;
+  z-index: 2;
+
+  @include vp-1023 {
+    padding: 30px 20px 0 36px;
+  }
+
+  @include vp-767 {
+    padding: 29px 20px 0 25px;
+  }
+}
+
+.cruise-info__head {
+  font-family: "Montserrat", "Aial", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: $light-beige;
+  margin: 0;
+  margin-bottom: 14px;
+}
+
+.cruise-info__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cruise-info__item h3 {
+  font-family: "Montserrat", "Aial", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: $light-beige;
+  margin: 0;
+}
+
+.cruise-info__item p {
+  font-family: "Montserrat", "Aial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $light-beige;
+  margin-top: 0;
+  margin-bottom: 11px;
+}
+
+.cruise-info__button {
+  display: block;
+  align-self: center;
+  background-color: $light-beige;
+  color: $dark-blue;
+  font-family: "Montserrat", "Aial", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  position: absolute;
+  padding: 10px 47px 10px 46px;
+  margin: 0;
+  left: 27px;
+  bottom: 35px;
+
+  @include vp-1023 {
+    left: 37px;
+    padding: 10px 62px;
+  }
+
+  @include vp-767 {
+    left: 25px;
+    padding: 10px 52px;
+  }
+}
