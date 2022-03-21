@@ -5,6 +5,11 @@
   line-height: 20px;
   align-items: center;
   z-index: 2;
+
+  @include vp-767 {
+    display: flex;
+    position: relative;
+  }
 }
 
 .page-header__wrapper {
@@ -21,14 +26,16 @@
 
   @include vp-767 {
     width: 320px;
-    margin: 20px auto;
+    margin: 0 auto;
+    padding: 20px 0;
+    height: 20px;
   }
 }
 
 .page-header__logo {
   padding-left: 13px;
 
-  @include vp-767 {
-    display: none;
-  }
+  // @include vp-767 {
+    // display: none;
+  // }
 }

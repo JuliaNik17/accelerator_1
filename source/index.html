@@ -11,7 +11,7 @@
   <body class="page__body">
     <div class="wrapper">
       <header class="page-header">
-        <div class="page-header__wrapper page-header__wrapper--closed page-header__wrapper--nojs">
+        <div class="page-header__wrapper">
           <a class="page-header__logo">
             <picture>
               <source media="(max-width: 767px)" srcset="img/svg/logo_mob.svg">
@@ -20,36 +20,31 @@
             </picture>
           </a>
           <nav class="main-nav main-nav--closed main-nav--nojs">
-            <div class="main-nav-mob">
-            <a class="main-nav-mob__logo main-nav-mob__logo--nojs main-nav-mob__logo--opened">
-              <img src="img/svg/logo_menu.svg" alt="Логотип сайта: горы" width="42" height="22">
-            </a>
-            <button class="main-nav-mob__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-            </div>
+            <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
             <div class="main-nav__wrapper">
               <ul class="main-nav__list site-list">
-                  <li class="site-list__item ">
-                    <a href="#advantages">
-                      Преимущества
-                    </a>
-                  </li>
-                  <li class="site-list__item">
-                    <a href="#">
-                      Направления
-                    </a>
-                  </li>
-                  <li class="site-list__item">
-                    <a href="#catalog">
-                      Ближайшие круизы
-                    </a>
-                  </li>
-                  <li class="site-list__item">
-                    <a href="#contacts">
-                      Контакты
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                <li class="site-list__item ">
+                  <a href="#advantages">
+                  Преимущества
+                  </a>
+                </li>
+                <li class="site-list__item">
+                  <a href="#">
+                    Направления
+                  </a>
+                </li>
+                <li class="site-list__item">
+                  <a href="#catalog">
+                    Ближайшие круизы
+                  </a>
+                </li>
+                <li class="site-list__item">
+                  <a href="#contacts">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
       </header>
@@ -522,7 +517,7 @@
       </div>
     </div>
 
-    <!--<script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>-->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>
