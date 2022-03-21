@@ -22,6 +22,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 const navMain = document.querySelector('.main-nav');
 const navToggle = document.querySelector('.main-nav__toggle');
+const phoneInput = document.getElementById('phone-number');
+const PHONE_NUMBER_LENGTH = 11;
 
 navMain.classList.remove('main-nav--nojs');
 
@@ -33,6 +35,20 @@ navToggle.addEventListener('click', function () {
     navMain.classList.add('main-nav--closed');
     navMain.classList.remove('main-nav--opened');
   }
+});
+
+phoneInput.addEventListener('input', () => {
+  const valueLength = phoneInput.value.length;
+
+  if (valueLength < PHONE_NUMBER_LENGTH) {
+    phoneInput.setCustomValidity('Введите номер телефона в формате: 88009202020');
+  } else if (valueLength > PHONE_NUMBER_LENGTH) {
+    phoneInput.setCustomValidity('Номер телефона не должен превышать 11 знаков');
+  } else {
+    phoneInput.setCustomValidity('');
+  }
+
+  phoneInput.reportValidty();
 });
 
 // ---------------------------------
