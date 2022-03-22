@@ -390,7 +390,7 @@
                     </li>
                     <li class="booking-form__item">
                       <label for="phone-number" class="visually-hidden">Телефон</label>
-                      <input type="tel" name="phone-number" id="phone-number" placeholder="Телефон" required>
+                      <input type="tel" name="phone-number" id="phone-number" placeholder="Телефон" required minlength="11" maxlength="11" pattern="8[0-9]{10}">
                     </li>
                     <li class="booking-form__item">
                       <label for="email" class="visually-hidden">Адрес электронной почты</label>
@@ -407,7 +407,7 @@
             </div>
           </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
           <div class="contacts__wrapper">
             <h2 class="visually-hidden">Наши контакты</h2>
             <div class="contacts__map">

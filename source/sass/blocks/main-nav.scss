@@ -14,6 +14,7 @@
   flex-direction: row;
   justify-content: space-between;
   margin: 0;
+  flex-wrap: wrap;
 
   @include vp-767 {
     background-color: $light-beige;
@@ -54,7 +55,6 @@
   }
 }
 
-.main-nav--nojs .main-nav__list,
 .main-nav--closed .main-nav__list {
   @include vp-767 {
     display: none;
@@ -135,7 +135,6 @@
   }
 }
 
-.main-nav--nojs .main-nav__wrapper::before,
 .main-nav--opened .main-nav__toggle::before {
   @include vp-767 {
     content: "";
