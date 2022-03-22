@@ -54,6 +54,7 @@
   }
 }
 
+.main-nav--nojs .main-nav__list,
 .main-nav--closed .main-nav__list {
   @include vp-767 {
     display: none;
@@ -84,7 +85,7 @@
     min-height: 0;
     width: 90%;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 3;
     background-color: $light-beige;
   }
@@ -130,10 +131,11 @@
     z-index: 4;
     width: 42px;
     height: 22px;
-    background: url("../img/svg/logo_menu.svg");
+    background: url("../img/sprite/logo_menu.svg");
   }
 }
 
+.main-nav--nojs .main-nav__wrapper::before,
 .main-nav--opened .main-nav__toggle::before {
   @include vp-767 {
     content: "";

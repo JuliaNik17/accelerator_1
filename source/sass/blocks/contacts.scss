@@ -74,7 +74,7 @@
   }
 }
 
-.contacts__text {
+.contacts p {
   font-family: "Montserrat", "Arial", sans-serif;
   color: $dark-blue;
   font-weight: 500;
@@ -93,7 +93,7 @@
   }
 }
 
-.contacts__text br {
+.contacts br {
   display: none;
 
   @include vp-1023 {

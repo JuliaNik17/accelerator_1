@@ -6,25 +6,29 @@
   background-size: cover;
 
   @media (min-resolution: retina) {
-    background-image: url("../img/content/booking@2x.jpg");
+    background: url("../img/content/booking@2x.jpg") $background-blue no-repeat;
     background-size: 2732px auto;
   }
 
   @include vp-1023 {
-    background-image: url("../img/content/booking_tablet.jpg");
+    background: url("../img/content/booking_tablet.jpg") $background-blue no-repeat;
+    background-position-x: center;
+    background-size: cover;
 
     @media (min-resolution: retina) {
-      background-image: url("../img/content/booking_tablet@2x.jpg");
+      background: url("../img/content/booking_tablet@2x.jpg") $background-blue no-repeat;
       background-size: 1536px auto;
     }
   }
 
   @include vp-767 {
     min-width: 320px;
-    background-image: url("../img/content/booking_mob.jpg");
+    background: url("../img/content/booking_mob.jpg") $background-blue no-repeat;
+    background-position-x: center;
+    background-size: cover;
 
     @media (min-resolution: retina) {
-      background-image: url("../img/content/booking_mob@2x.jpg");
+      background: url("../img/content/booking_mob@2x.jpg") $background-blue no-repeat;
       background-size: 640px auto;
     }
   }

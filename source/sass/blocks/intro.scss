@@ -16,12 +16,18 @@
     background-image: url("../../img/content/main_picture_tablet.jpg");
     height: 638px;
     margin-top: -80px;
+    background-position-x: center;
+    background-size: cover;
+    overflow: visible;
   }
 
   @include vp-767 {
     background-image: url("../../img/content/main_picture_mob.jpg");
     height: 500px;
     margin-top: -60px;
+    background-position-x: center;
+    background-size: cover;
+    overflow: visible;
   }
 }
 
@@ -49,7 +55,7 @@
   }
 }
 
-.intro__head {
+.intro h2 {
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 700px;
   font-size: 54px;
@@ -75,7 +81,7 @@
   }
 }
 
-.intro__text {
+.intro p {
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 400px;
   font-size: 20px;

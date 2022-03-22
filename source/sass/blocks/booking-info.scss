@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-.booking-info__head {
+.booking-info h2 {
   font-family: "Montserrat", "Arial", sans-serif;
   color: $dark-blue;
   font-weight: 700;
@@ -24,7 +24,7 @@
   }
 }
 
-.booking-info__text {
+.booking-info p {
   font-family: "Montserrat", "Arial", sans-serif;
   color: $dark-blue;
   font-weight: 400;
