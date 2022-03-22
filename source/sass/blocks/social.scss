@@ -15,15 +15,44 @@
 .social__link--facebook {
   padding-right: 35px;
 
+  @include vp-1023 {
+    padding-right: 23px;
+  }
+
   @include vp-767 {
     padding-right: 20px;
+  }
+}
+
+.social__link--facebook img {
+  @include vp-1023 {
+    width: 9px;
+    height: 16px;
   }
 }
 
 .social__link--instagram {
   padding-right: 35px;
 
+  @include vp-1023 {
+    padding-right: 23px;
+  }
+
   @include vp-767 {
     padding-right: 20px;
+  }
+}
+
+.social__link--instagram img {
+  @include vp-1023 {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.social__link--twitter img {
+  @include vp-1023 {
+    width: 16px;
+    height: 13px;
   }
 }
