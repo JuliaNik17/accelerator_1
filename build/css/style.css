@@ -1344,7 +1344,7 @@ button,
   font-family: "Montserrat", "Arial", sans-serif;
   color: #f9fbfd;
   font-weight: 400;
-  font-size: 0.1px;
+  font-size: 10px;
   line-height: 1px;
   width: 279px;
   letter-spacing: -1.5px;
@@ -1624,7 +1624,7 @@ button,
   }
 
   .intro {
-    background-image: url("../../img/content/main_picture_tablet.jpg");
+    background-image: url("../img/content/main_picture_tablet.jpg");
     height: 638px;
     margin-top: -80px;
     background-position-x: center;
@@ -2093,7 +2093,7 @@ button,
   }
 
   .intro {
-    background-image: url("../../img/content/main_picture_mob.jpg");
+    background-image: url("../img/content/main_picture_mob.jpg");
     height: 500px;
     margin-top: -40px;
     background-position-x: center;
@@ -2106,7 +2106,7 @@ button,
   }
 
   .intro__wrapper {
-    min-width: 320px;
+    width: 320px;
     margin: 0 auto;
   }
 
