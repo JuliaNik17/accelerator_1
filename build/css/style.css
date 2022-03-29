@@ -846,7 +846,11 @@ button,
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
-  padding-right: 33px;
+  margin-right: 33px;
+}
+
+.site-list__item a:hover {
+  opacity: 0.8;
 }
 
 .site-list__item:nth-child(4n) a {
@@ -867,10 +871,6 @@ button,
   overflow: visible;
   margin-top: -108px;
   height: 650px;
-}
-
-.intro br {
-  display: none;
 }
 
 .intro__wrapper {
@@ -916,10 +916,10 @@ button,
 .trips__wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 540px 560px;
-  grid-template-columns: 540px 560px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 77px;
-  width: 1180px;
+  width: 90%;
   margin: 120px auto;
 }
 
@@ -995,7 +995,7 @@ button,
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 40px;
   position: relative;
-  max-width: 1170px;
+  width: 85%;
 }
 
 .option-list__item {
@@ -1080,6 +1080,9 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   margin: 0 auto 120px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .catalog h2 {
@@ -1100,8 +1103,7 @@ button,
   max-width: 1140px;
   list-style: none;
   margin: 0;
-  padding: 0;
-  padding-left: 10px;
+  padding: 0 10px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
@@ -1122,6 +1124,7 @@ button,
   position: relative;
 }
 
+.cruise-list__item:focus .cruise-info,
 .cruise-list__item:hover .cruise-info {
   z-index: 10;
 }
@@ -1174,6 +1177,7 @@ button,
   padding-top: 28px;
   padding-left: 27px;
   z-index: 2;
+  overflow-y: auto;
 }
 
 .cruise-info h3 {
@@ -1222,11 +1226,20 @@ button,
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
-  position: absolute;
   padding: 10px 47px 10px 46px;
   margin: 0;
-  left: 27px;
-  bottom: 35px;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin-bottom: 35px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.cruise-info a:hover,
+.cruise-info a:focus {
+  opacity: 0.8;
 }
 
 .booking {
@@ -1245,6 +1258,7 @@ button,
   display: flex;
   max-width: 1160px;
   margin: 50px auto;
+  width: 85%;
 }
 
 .booking-info {
@@ -1330,6 +1344,7 @@ button,
 }
 
 .booking-form__item input {
+  color: #011c40;
   border: none;
   background-color: #f9fbfd;
   font-family: "Montserrat", "Arial", sans-serif;
@@ -1375,6 +1390,13 @@ button,
   background: url("../img/sprite/agreement_icon.svg") no-repeat #f9fbfd;
 }
 
+.agreement-checkbox:focus + label::before,
+.agreement-checkbox:checked:focus + label::before {
+  width: 19px;
+  height: 19px;
+  border: 1px solid #5b92e5;
+}
+
 .send-button {
   border: none;
   background-color: #f9fbfd;
@@ -1385,6 +1407,15 @@ button,
   line-height: 21px;
   padding: 10px 87px 10px 90px;
   margin-top: 25px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  opacity: 0.8;
 }
 
 .contacts {
@@ -1462,12 +1493,19 @@ button,
 
 .contacts-list__item a {
   display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-family: "Montserrat", "Arial", sans-serif;
   color: #011c40;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   padding-left: 30px;
+}
+
+.contacts-list__item a:hover {
+  opacity: 0.8;
 }
 
 .contacts-list__item br {
@@ -1509,7 +1547,11 @@ button,
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
-  padding-right: 33px;
+  margin-right: 33px;
+}
+
+.footer-list__item a:hover {
+  opacity: 0.8;
 }
 
 .page-footer {
@@ -1521,6 +1563,7 @@ button,
 
 .page-footer__wrapper {
   max-width: 1180px;
+  width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1575,12 +1618,16 @@ button,
   display: block;
 }
 
+.social a:hover {
+  opacity: 0.8;
+}
+
 .social__link--facebook {
-  padding-right: 35px;
+  margin-right: 35px;
 }
 
 .social__link--instagram {
-  padding-right: 35px;
+  margin-right: 35px;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -1620,7 +1667,7 @@ button,
   .site-list__item a {
     font-size: 14px;
     line-height: 17px;
-    padding-right: 23px;
+    margin-right: 23px;
   }
 
   .intro {
@@ -1663,11 +1710,15 @@ button,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    width: 690px;
     margin: 83px auto 80px;
     -ms-grid-columns: none;
     grid-template-columns: none;
-    grid-gap: 0;
+    grid-gap: 30px;
+  }
+
+  .trips__wrapper img {
+    width: 324px;
+    height: 264px;
   }
 
   .trips-info {
@@ -1712,8 +1763,6 @@ button,
 
   .advantages__list {
     grid-gap: 30px;
-    -ms-grid-columns: 206px 206px 206px;
-    grid-template-columns: 206px 206px 206px;
     margin: 0 auto 100px;
     padding-left: 0;
   }
@@ -1781,7 +1830,6 @@ button,
   }
 
   .cruise-info a {
-    left: 37px;
     padding: 10px 62px;
   }
 
@@ -1797,6 +1845,9 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     margin-bottom: 102px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .booking-info h2 {
@@ -1877,7 +1928,7 @@ button,
   .footer-list__item a {
     font-size: 12px;
     line-height: 15px;
-    padding-right: 15px;
+    margin-right: 15px;
   }
 
   .page-footer__wrapper {
@@ -1891,7 +1942,7 @@ button,
   }
 
   .social__link--facebook {
-    padding-right: 23px;
+    margin-right: 23px;
   }
 
   .social__link--facebook img {
@@ -1900,7 +1951,7 @@ button,
   }
 
   .social__link--instagram {
-    padding-right: 23px;
+    margin-right: 23px;
   }
 
   .social__link--instagram img {
@@ -1957,7 +2008,7 @@ button,
   }
 
   .page-header__wrapper {
-    width: 320px;
+    width: 90%;
     margin: 0 auto;
     padding: 20px 0;
     height: 20px;
@@ -2089,7 +2140,8 @@ button,
     font-size: 18px;
     line-height: 22px;
     display: block;
-    padding: 10px 39px 17px 10px;
+    padding: 10px 0 17px;
+    margin: 0 39px 0 10px;
   }
 
   .intro {
@@ -2101,13 +2153,12 @@ button,
     overflow: visible;
   }
 
-  .intro br {
-    display: block;
-  }
-
   .intro__wrapper {
-    width: 320px;
+    min-width: 320px;
     margin: 0 auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .intro h2 {
@@ -2128,8 +2179,13 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: 290px;
     margin: 50px auto 65px;
+    grid-gap: unset;
+  }
+
+  .trips__wrapper img {
+    width: 290px;
+    height: 186px;
   }
 
   .trips-info {
@@ -2208,7 +2264,6 @@ button,
   }
 
   .cruise-info a {
-    left: 25px;
     padding: 10px 52px;
   }
 
@@ -2222,7 +2277,7 @@ button,
   .booking__wrapper {
     margin: 20px auto 65px;
     padding-left: 0;
-    width: 290px;
+    min-width: 290px;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -2250,7 +2305,8 @@ button,
   }
 
   .booking-form {
-    width: 290px;
+    max-width: none;
+    width: 100%;
     margin: 0 auto;
     padding: 35px 30px 38px;
     display: -webkit-box;
@@ -2277,27 +2333,21 @@ button,
 
   .booking-form__item input {
     padding-right: 7px;
-  }
-
-  .booking-form__agreement {
-    margin-left: 27px;
+    width: 100%;
   }
 
   .booking-form__agreement label {
-    padding-left: 0;
-  }
-
-  .booking-form__agreement br {
-    display: block;
+    padding-left: 28px;
   }
 
   .agreement-checkbox + label::before {
-    left: -27px;
+    left: 0;
   }
 
   .send-button {
-    margin-top: 0;
+    margin-top: 30px;
     padding: 13px 53px;
+    width: 100%;
   }
 
   .contacts__wrapper {
@@ -2305,13 +2355,13 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: 290px;
+    width: 90%;
     margin: 57px auto 63px;
   }
 
   .contacts__map {
     background: url("../img/content/map_mob.png") #e0b37b no-repeat;
-    width: 290px;
+    width: 100%;
     height: 316px;
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
@@ -2320,7 +2370,7 @@ button,
   }
 
   .contacts__map iframe {
-    width: 290px;
+    width: 100%;
     height: 316px;
   }
 
@@ -2352,7 +2402,7 @@ button,
   .footer-list__item a {
     width: 100%;
     display: block;
-    padding: 10px 39px 8px 0;
+    margin: 10px 39px 8px 0;
   }
 
   .page-footer__wrapper {
@@ -2387,11 +2437,24 @@ button,
   }
 
   .social__link--facebook {
-    padding-right: 20px;
+    margin-right: 20px;
   }
 
   .social__link--instagram {
-    padding-right: 20px;
+    margin-right: 20px;
+  }
+
+  .overley {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: url("../../img/content/main_picture_mob.jpg") 0 0 no-repeat #5b92e5;
   }
 }
 
@@ -2404,6 +2467,20 @@ button,
   .booking {
     background: url("../img/content/booking_mob@2x.jpg") #5b92e5 no-repeat;
     background-size: 640px auto;
+  }
+}
+
+@media (max-width: 374px) {
+  .booking-form__agreement br {
+    display: block;
+  }
+}
+
+@media (max-width: 320px) {
+  .intro__wrapper {
+    -webkit-box-align: unset;
+    -ms-flex-align: unset;
+    align-items: unset;
   }
 }
 

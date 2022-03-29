@@ -8,7 +8,7 @@
   background-color: $light-beige;
 
   @include vp-767 {
-    left: -27px;
+    left: 0;
   }
 }
 
@@ -19,4 +19,11 @@
   width: 18px;
   height: 18px;
   background: url("../img/sprite/agreement_icon.svg") no-repeat $light-beige;
+}
+
+.agreement-checkbox:focus + label::before,
+.agreement-checkbox:checked:focus + label::before {
+  width: 19px;
+  height: 19px;
+  border: 1px solid $background-blue;
 }

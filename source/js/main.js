@@ -51,6 +51,7 @@ phoneInput.addEventListener('input', () => {
   phoneInput.reportValidty();
 });
 
+
 // ---------------------------------
 
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.

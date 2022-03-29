@@ -10,17 +10,21 @@
 
 .social a {
   display: block;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .social__link--facebook {
-  padding-right: 35px;
+  margin-right: 35px;
 
   @include vp-1023 {
-    padding-right: 23px;
+    margin-right: 23px;
   }
 
   @include vp-767 {
-    padding-right: 20px;
+    margin-right: 20px;
   }
 }
 
@@ -32,14 +36,14 @@
 }
 
 .social__link--instagram {
-  padding-right: 35px;
+  margin-right: 35px;
 
   @include vp-1023 {
-    padding-right: 23px;
+    margin-right: 23px;
   }
 
   @include vp-767 {
-    padding-right: 20px;
+    margin-right: 20px;
   }
 }
 
