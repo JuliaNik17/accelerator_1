@@ -1089,6 +1089,10 @@ button,
   display: none;
 }
 
+.option-list__desktop--nomob {
+  display: block;
+}
+
 .catalog {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1348,7 +1352,7 @@ button,
   flex-direction: column;
 }
 
-.booking-form p {
+.booking-form__intro {
   font-family: "Montserrat", "Arial", sans-serif;
   color: #f9fbfd;
   font-weight: 500;
@@ -1385,19 +1389,24 @@ button,
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  padding: 11px 80px 11px 16px;
+  padding: 13px 80px 10px 16px;
 }
 
 .booking-form__agreement label {
+  position: relative;
+}
+
+.booking-form__agreement p {
+  width: 281px;
+  padding-left: 20px;
   font-family: "Montserrat", "Arial", sans-serif;
   color: #f9fbfd;
   font-weight: 400;
-  font-size: 10px;
-  line-height: 1px;
-  width: 279px;
-  letter-spacing: -1.5px;
-  padding-left: 10px;
-  position: relative;
+  font-size: 5px;
+  line-height: 3px;
+  letter-spacing: -2.5px;
+  margin: 0;
+  margin-top: 5px;
 }
 
 .booking-form__agreement br {
@@ -1410,7 +1419,7 @@ button,
   cursor: pointer;
   width: 18px;
   height: 18px;
-  left: -5px;
+  left: 0;
   background-color: #f9fbfd;
 }
 
@@ -1438,8 +1447,8 @@ button,
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
-  padding: 10px 87px 10px 90px;
-  margin-top: 25px;
+  padding: 10px 87px 11px;
+  margin-top: 38px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1868,6 +1877,10 @@ button,
     display: block;
   }
 
+  .option-list__desktop--nomob {
+    display: none;
+  }
+
   .catalog__wrapper {
     margin-bottom: 100px;
   }
@@ -1939,7 +1952,11 @@ button,
   }
 
   .booking-form__item input {
-    padding-right: 82px;
+    padding: 12px 82px 9px 16px;
+  }
+
+  .booking-form__agreement p {
+    margin-top: 10px;
   }
 
   .agreement-checkbox + label::before {
@@ -1947,7 +1964,6 @@ button,
   }
 
   .send-button {
-    margin-top: 23px;
     padding: 11px 89px 11px 90px;
   }
 
@@ -2374,10 +2390,6 @@ button,
     display: block;
   }
 
-  .option-list__desktop--nomob {
-    display: none;
-  }
-
   .catalog__wrapper {
     margin-bottom: 65px;
   }
@@ -2458,7 +2470,7 @@ button,
     max-width: none;
     width: 100%;
     margin: 0 auto;
-    padding: 35px 30px 38px;
+    padding: 35px 30px 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2472,7 +2484,7 @@ button,
     width: 100%;
   }
 
-  .booking-form p {
+  .booking-form__intro {
     line-height: 25px;
     text-align: center;
   }
@@ -2486,12 +2498,20 @@ button,
     width: 100%;
   }
 
-  .booking-form__agreement label {
-    padding-left: 28px;
+  .booking-form__agreement p {
+    line-height: 80%;
+    letter-spacing: -0.5px;
+    padding-left: 25px;
+    margin-top: 0;
+  }
+
+  .agreement-checkbox + label::before {
+    left: 1px;
+    top: 4px;
   }
 
   .send-button {
-    margin-top: 2px;
+    margin-top: 30px;
     padding: 12px 53px 11px;
     width: 100%;
   }

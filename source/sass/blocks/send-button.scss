@@ -6,8 +6,8 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
-  padding: 10px 87px 10px 90px;
-  margin-top: 25px;
+  padding: 10px 87px 11px;
+  margin-top: 38px;
   user-select: none;
   cursor: pointer;
 
@@ -16,12 +16,11 @@
   }
 
   @include vp-1023 {
-    margin-top: 23px;
     padding: 11px 89px 11px 90px;
   }
 
   @include vp-767 {
-    margin-top: 2px;
+    margin-top: 30px;
     padding: 12px 53px 11px;
     width: 100%;
   }

@@ -161,7 +161,9 @@
 }
 
 .option-list__desktop--nomob {
-  @include vp-767 {
+  display: block;
+
+  @include vp-1023 {
     display: none;
   }
 }
