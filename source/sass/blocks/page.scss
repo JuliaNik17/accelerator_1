@@ -23,3 +23,8 @@
     min-width: $vp-320;
   }
 }
+
+.page__lock {
+  overflow-y: scroll;
+  position: fixed;
+}

@@ -4,10 +4,10 @@
   cursor: pointer;
   width: 18px;
   height: 18px;
-  left: -10px;
+  left: -5px;
   background-color: $light-beige;
 
-  @include vp-767 {
+  @include vp-1023 {
     left: 0;
   }
 }

@@ -40,7 +40,9 @@
   max-width: 1366px;
 
   @include vp-767 {
-    min-width: 290px;
+    width: 100%;
+    align-content: center;
+    padding: 0 15px;
   }
 }
 
@@ -72,24 +74,27 @@
 .advantages__list {
   list-style: none;
   padding: 0;
-  padding-left: 11px;
+  padding-left: 15px;
   margin: 0 auto 120px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 40px;
   position: relative;
-  width: 85%;
+  width: 87%;
 
   @include vp-1023 {
+    width: 92%;
     grid-gap: 30px;
     // grid-template-columns: 206px 206px 206px;
     margin: 0 auto 100px;
-    padding-left: 0;
+    padding-left: 15px;
   }
 
   @include vp-767 {
-    grid-template-columns: 290px;
+    width: 100%;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    margin: 0 auto 70px;
+    margin: 0 0 65px;
+    padding-left: 0;
   }
 }

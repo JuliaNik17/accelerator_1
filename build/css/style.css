@@ -782,6 +782,11 @@ button,
   margin: 0 auto;
 }
 
+.page__lock {
+  overflow-y: scroll;
+  position: fixed;
+}
+
 .page-header {
   color: #f9fbfd;
   font-weight: 500;
@@ -794,7 +799,8 @@ button,
 }
 
 .page-header__wrapper {
-  max-width: 1170px;
+  max-width: 1180px;
+  width: 95%;
   margin: 35px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -828,10 +834,8 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   margin: 0;
+  margin-left: 30px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -840,13 +844,21 @@ button,
   display: none;
 }
 
+.main-nav--nojs .page-header__logo {
+  display: none;
+}
+
+.site-list__item {
+  margin: 10px 0 10px 35px;
+}
+
 .site-list__item a {
   color: #f9fbfd;
   font-weight: 500;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
-  margin-right: 33px;
+  margin-right: 0;
 }
 
 .site-list__item a:hover {
@@ -854,7 +866,7 @@ button,
 }
 
 .site-list__item:nth-child(4n) a {
-  padding-right: 0;
+  margin-right: 0;
 }
 
 .page-main {
@@ -869,7 +881,7 @@ button,
   background-position-x: center;
   background-size: cover;
   overflow: visible;
-  margin-top: -108px;
+  margin-top: -110px;
   height: 650px;
 }
 
@@ -918,9 +930,10 @@ button,
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 77px;
-  width: 90%;
+  grid-gap: 45px;
+  width: 89%;
   margin: 120px auto;
+  padding-left: 10px;
 }
 
 .trips-info h2 {
@@ -946,7 +959,11 @@ button,
   margin-left: 17px;
 }
 
-.trips-info br {
+.trips-info h2 br {
+  display: none;
+}
+
+.trips-info__mobile {
   display: none;
 }
 
@@ -987,7 +1004,7 @@ button,
 .advantages__list {
   list-style: none;
   padding: 0;
-  padding-left: 11px;
+  padding-left: 15px;
   margin: 0 auto 120px;
   display: -ms-grid;
   display: grid;
@@ -995,7 +1012,7 @@ button,
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 40px;
   position: relative;
-  width: 85%;
+  width: 87%;
 }
 
 .option-list__item {
@@ -1051,6 +1068,10 @@ button,
   margin-left: 30px;
 }
 
+.option-list h3 br {
+  display: none;
+}
+
 .option-list p {
   font-family: "Montserrat", "Arial", sans-serif;
   color: #011c40;
@@ -1060,7 +1081,11 @@ button,
   margin: 0 30px 25px;
 }
 
-.option-list__item br {
+.option-list__tablet {
+  display: none;
+}
+
+.option-list__mobile {
   display: none;
 }
 
@@ -1103,7 +1128,8 @@ button,
   max-width: 1140px;
   list-style: none;
   margin: 0;
-  padding: 0 10px;
+  padding: 0;
+  padding-left: 11px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
@@ -1165,7 +1191,6 @@ button,
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -1193,6 +1218,7 @@ button,
 .cruise-info__list {
   list-style: none;
   margin: 0;
+  margin-bottom: 18px;
   padding: 0;
 }
 
@@ -1217,9 +1243,6 @@ button,
 
 .cruise-info a {
   display: block;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
   background-color: #f9fbfd;
   color: #011c40;
   font-family: "Montserrat", "Aial", sans-serif;
@@ -1269,6 +1292,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  padding-left: 47px;
 }
 
 .booking-info h2 {
@@ -1277,7 +1301,7 @@ button,
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
-  margin: 161px 60px 0 15px;
+  margin: 162px 60px 0 15px;
 }
 
 .booking-info p {
@@ -1286,7 +1310,7 @@ button,
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
-  margin-top: 10px;
+  margin-top: 8px;
   margin-left: 15px;
 }
 
@@ -1310,8 +1334,18 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 45px 50px 50px;
+  padding: 42px 50px 50px;
   margin-left: 85px;
+}
+
+.booking-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .booking-form p {
@@ -1336,7 +1370,7 @@ button,
 .booking-form__list {
   list-style: none;
   padding-left: 0;
-  margin-top: 28px;
+  margin-top: 27px;
 }
 
 .booking-form__item {
@@ -1348,7 +1382,6 @@ button,
   border: none;
   background-color: #f9fbfd;
   font-family: "Montserrat", "Arial", sans-serif;
-  color: rgba(1, 28, 64, 0.7);
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
@@ -1377,7 +1410,7 @@ button,
   cursor: pointer;
   width: 18px;
   height: 18px;
-  left: -10px;
+  left: -5px;
   background-color: #f9fbfd;
 }
 
@@ -1465,10 +1498,10 @@ button,
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
-  margin: 73px 0 0 2px;
+  margin: 76px 0 0 2px;
 }
 
-.contacts br {
+.contacts__info p br {
   display: none;
 }
 
@@ -1484,6 +1517,10 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.contacts__list a br {
+  display: none;
 }
 
 .contacts-list__item {
@@ -1538,7 +1575,14 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 0;
+  margin-left: 25px;
+}
+
+.footer-list__item {
+  margin: 10px 0 5px;
 }
 
 .footer-list__item a {
@@ -1576,12 +1620,10 @@ button,
   align-items: center;
   margin: 50px auto;
   padding-left: 15px;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 .page-footer__nav {
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1592,7 +1634,7 @@ button,
 
 .page-footer__nav img {
   display: block;
-  margin-right: 42px;
+  margin-right: 15px;
 }
 
 .social__list {
@@ -1660,20 +1702,32 @@ button,
   }
 
   .page-header__wrapper {
-    max-width: 690px;
     margin: 30px auto;
+  }
+
+  .page-header img {
+    padding-left: 25px;
+  }
+
+  .main-nav__list {
+    margin: 0 10px 0 15px;
+  }
+
+  .site-list__item {
+    margin-left: 0;
+    margin-top: 0;
   }
 
   .site-list__item a {
     font-size: 14px;
     line-height: 17px;
-    margin-right: 23px;
+    margin-right: 25px;
   }
 
   .intro {
     background-image: url("../img/content/main_picture_tablet.jpg");
     height: 638px;
-    margin-top: -80px;
+    margin-top: -90px;
     background-position-x: center;
     background-size: cover;
     overflow: visible;
@@ -1697,6 +1751,7 @@ button,
   }
 
   .trips__wrapper {
+    width: 92%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1713,12 +1768,14 @@ button,
     margin: 83px auto 80px;
     -ms-grid-columns: none;
     grid-template-columns: none;
-    grid-gap: 30px;
+    grid-gap: unset;
+    padding-left: 0;
   }
 
   .trips__wrapper img {
     width: 324px;
     height: 264px;
+    margin-bottom: 8px;
   }
 
   .trips-info {
@@ -1736,16 +1793,16 @@ button,
     font-size: 26px;
     line-height: 36px;
     margin-top: 8px;
-    margin-left: 12px;
+    margin-left: 15px;
   }
 
   .trips-info p {
     width: 324px;
     margin-top: 15px;
-    margin-left: 12px;
+    margin-left: 15px;
   }
 
-  .trips-info br {
+  .trips-info h2 br {
     display: block;
   }
 
@@ -1762,9 +1819,10 @@ button,
   }
 
   .advantages__list {
+    width: 92%;
     grid-gap: 30px;
     margin: 0 auto 100px;
-    padding-left: 0;
+    padding-left: 15px;
   }
 
   .option-list__item--ship::before {
@@ -1802,6 +1860,14 @@ button,
     margin: 0 15px 18px 20px;
   }
 
+  .option-list__desktop {
+    display: none;
+  }
+
+  .option-list__tablet {
+    display: block;
+  }
+
   .catalog__wrapper {
     margin-bottom: 100px;
   }
@@ -1826,7 +1892,7 @@ button,
   }
 
   .cruise-info {
-    padding: 30px 20px 0 36px;
+    padding: 29px 20px 0 35px;
   }
 
   .cruise-info a {
@@ -1844,10 +1910,14 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin-bottom: 102px;
+    margin-bottom: 100px;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+  }
+
+  .booking-info {
+    padding-left: 15px;
   }
 
   .booking-info h2 {
@@ -1864,12 +1934,21 @@ button,
   }
 
   .booking-form {
-    margin-left: 8px;
+    margin-left: 15px;
+    padding: 45px 50px 50px;
+  }
+
+  .booking-form__item input {
+    padding-right: 82px;
+  }
+
+  .agreement-checkbox + label::before {
+    left: 0;
   }
 
   .send-button {
     margin-top: 23px;
-    padding-right: 89px;
+    padding: 11px 89px 11px 90px;
   }
 
   .contacts__wrapper {
@@ -1898,13 +1977,17 @@ button,
     margin-top: 65px;
   }
 
-  .contacts br {
+  .contacts__info p br {
     display: block;
   }
 
   .contacts__list {
     margin-top: 28px;
     margin-bottom: 20px;
+  }
+
+  .contacts__list a br {
+    display: block;
   }
 
   .contacts-list__item a {
@@ -1925,16 +2008,25 @@ button,
     left: 0;
   }
 
+  .footer-list {
+    margin-left: 0;
+  }
+
+  .footer-list__item {
+    margin-top: 8px;
+  }
+
   .footer-list__item a {
     font-size: 12px;
     line-height: 15px;
-    margin-right: 15px;
+    margin-right: 22px;
+    letter-spacing: -0.5px;
   }
 
   .page-footer__wrapper {
-    padding-right: 45px;
-    padding-left: 45px;
-    margin: 45px auto;
+    padding-right: 12px;
+    padding-left: 25px;
+    margin: 40px auto 43px;
   }
 
   .page-footer__nav img {
@@ -2008,10 +2100,13 @@ button,
   }
 
   .page-header__wrapper {
-    width: 90%;
+    max-width: none;
     margin: 0 auto;
-    padding: 20px 0;
-    height: 20px;
+    padding-top: 20px;
+  }
+
+  .page-header img {
+    padding-left: 6px;
   }
 
   .main-nav {
@@ -2029,14 +2124,14 @@ button,
     flex-direction: column;
     margin-top: 75px;
     margin-left: 15px;
-    margin-bottom: 230px;
+    margin-bottom: 300px;
     position: relative;
   }
 
   .main-nav__toggle {
     position: absolute;
-    top: 4px;
-    right: 15px;
+    top: -8px;
+    right: 7px;
     display: block;
     width: 25px;
     height: 15px;
@@ -2067,28 +2162,24 @@ button,
   }
 
   .main-nav--nojs {
-    position: absolute;
     width: 100%;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    background: url("../../img/content/main_picture_mob.jpg");
+    position: relative;
+    background-color: #f9fbfd;
+    margin-top: -20px;
+    margin-bottom: 20px;
   }
 
   .main-nav--nojs .main-nav__wrapper {
-    position: absolute;
-    min-height: 0;
-    width: 90%;
-    top: 0;
-    right: 0;
-    z-index: 3;
-    background-color: #f9fbfd;
+    position: relative;
+    width: 100%;
   }
 
   .main-nav--nojs .main-nav__list {
-    display: block;
-    width: 285px;
-    z-index: 4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-bottom: 0;
   }
 
   .main-nav--opened {
@@ -2116,7 +2207,7 @@ button,
     content: "";
     position: absolute;
     top: 21px;
-    left: 15px;
+    left: 17px;
     z-index: 4;
     width: 42px;
     height: 22px;
@@ -2126,12 +2217,16 @@ button,
   .main-nav--opened .main-nav__toggle::before {
     content: "";
     position: absolute;
-    top: 20px;
-    right: 0;
+    top: 32px;
+    right: 8px;
     width: 15px;
     height: 15px;
     z-index: 5;
     background: url("../img/sprite/close_icon.svg") no-repeat;
+  }
+
+  .site-list__item {
+    margin-bottom: 0;
   }
 
   .site-list__item a {
@@ -2141,13 +2236,13 @@ button,
     line-height: 22px;
     display: block;
     padding: 10px 0 17px;
-    margin: 0 39px 0 10px;
+    margin: 0 39px 0 12px;
   }
 
   .intro {
     background-image: url("../img/content/main_picture_mob.jpg");
     height: 500px;
-    margin-top: -40px;
+    margin-top: -42px;
     background-position-x: center;
     background-size: cover;
     overflow: visible;
@@ -2179,7 +2274,8 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin: 50px auto 65px;
+    padding-left: 2px;
+    margin: 50px auto 58px;
     grid-gap: unset;
   }
 
@@ -2204,8 +2300,12 @@ button,
     margin-left: 0;
   }
 
-  .trips-info p br {
+  .trips-info__tablet {
     display: none;
+  }
+
+  .trips-info__mobile {
+    display: block;
   }
 
   .advantages {
@@ -2216,7 +2316,10 @@ button,
   }
 
   .advantages__wrapper {
-    min-width: 290px;
+    width: 100%;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    padding: 0 15px;
   }
 
   .advantages h2 {
@@ -2226,11 +2329,53 @@ button,
   }
 
   .advantages__list {
-    -ms-grid-columns: 290px;
-    grid-template-columns: 290px;
+    width: 100%;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
     -ms-grid-rows: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    margin: 0 auto 70px;
+    margin: 0 0 65px;
+    padding-left: 0;
+  }
+
+  .option-list__item--boat::before {
+    top: 33px;
+  }
+
+  .option-list h3 {
+    margin-bottom: 8px;
+  }
+
+  .option-list__item--all-inclusive h3 {
+    margin-bottom: 10px;
+  }
+
+  .option-list__item--all-inclusive p {
+    margin-bottom: 19px;
+  }
+
+  .option-list__item--boat h3 {
+    margin-bottom: 9px;
+  }
+
+  .option-list h3 br {
+    display: block;
+  }
+
+  .option-list__desktop {
+    display: block;
+  }
+
+  .option-list__tablet {
+    display: none;
+  }
+
+  .option-list__mobile {
+    display: block;
+  }
+
+  .option-list__desktop--nomob {
+    display: none;
   }
 
   .catalog__wrapper {
@@ -2283,10 +2428,15 @@ button,
     align-items: center;
   }
 
+  .booking-info {
+    padding-left: 0;
+  }
+
   .booking-info h2 {
     font-size: 24px;
     line-height: 31px;
     text-align: center;
+    margin-top: 40px;
   }
 
   .booking-info p {
@@ -2340,13 +2490,9 @@ button,
     padding-left: 28px;
   }
 
-  .agreement-checkbox + label::before {
-    left: 0;
-  }
-
   .send-button {
-    margin-top: 30px;
-    padding: 13px 53px;
+    margin-top: 2px;
+    padding: 12px 53px 11px;
     width: 100%;
   }
 
@@ -2356,7 +2502,7 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     width: 90%;
-    margin: 57px auto 63px;
+    margin: 60px auto 65px;
   }
 
   .contacts__map {
@@ -2386,8 +2532,17 @@ button,
     padding-right: 5px;
   }
 
-  .contacts br {
+  .contacts__info p br {
     display: none;
+  }
+
+  .contacts__list {
+    margin-top: 27px;
+    margin-bottom: 15px;
+  }
+
+  .contacts-list__item a {
+    padding-left: 28px;
   }
 
   .footer-list {
@@ -2396,13 +2551,14 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .footer-list__item a {
     width: 100%;
     display: block;
-    margin: 10px 39px 8px 0;
+    margin: 5px 39px 0 0;
+    letter-spacing: -0.8px;
   }
 
   .page-footer__wrapper {
@@ -2437,24 +2593,24 @@ button,
   }
 
   .social__link--facebook {
-    margin-right: 20px;
+    margin-right: 22px;
   }
 
   .social__link--instagram {
-    margin-right: 20px;
+    margin-right: 23px;
   }
 
-  .overley {
+  .overlay {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 5;
+    z-index: 2;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background: url("../../img/content/main_picture_mob.jpg") 0 0 no-repeat #5b92e5;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 

@@ -11,12 +11,11 @@
   align-items: center;
   margin: 50px auto;
   padding-left: 15px;
-  justify-content: space-between;
 
   @include vp-1023 {
-    padding-right: 45px;
-    padding-left: 45px;
-    margin: 45px auto;
+    padding-right: 12px;
+    padding-left: 25px;
+    margin: 40px auto 43px;
   }
 
   @include vp-767 {
@@ -31,6 +30,7 @@
 }
 
 .page-footer__nav {
+  width: 90%;
   display: flex;
   align-items: center;
 
@@ -42,7 +42,7 @@
 
 .page-footer__nav img {
   display: block;
-  margin-right: 42px;
+  margin-right: 15px;
 
   @include vp-1023 {
     margin-right: 25px;

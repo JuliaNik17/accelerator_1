@@ -63,6 +63,10 @@
       top: 32px;
       left: 20px;
     }
+
+    @include vp-767 {
+      top: 33px;
+    }
   }
 }
 
@@ -81,6 +85,36 @@
     margin-left: 20px;
     margin-bottom: 10px;
   }
+
+  @include vp-767 {
+    margin-bottom: 8px;
+  }
+}
+
+.option-list__item--all-inclusive h3 {
+  @include vp-767 {
+    margin-bottom: 10px;
+  }
+}
+
+.option-list__item--all-inclusive p {
+  @include vp-767 {
+    margin-bottom: 19px;
+  }
+}
+
+.option-list__item--boat h3 {
+  @include vp-767 {
+    margin-bottom: 9px;
+  }
+}
+
+.option-list h3 br {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
 }
 
 .option-list p {
@@ -96,6 +130,38 @@
   }
 }
 
-.option-list__item br {
+.option-list__desktop {
+  @include vp-1023 {
+    display: none;
+  }
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.option-list__tablet {
   display: none;
+
+  @include vp-1023 {
+    display: block;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.option-list__mobile {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.option-list__desktop--nomob {
+  @include vp-767 {
+    display: none;
+  }
 }

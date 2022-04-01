@@ -20,10 +20,13 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+const body = document.querySelector('.page__body');
 const navMain = document.querySelector('.main-nav');
 const navToggle = document.querySelector('.main-nav__toggle');
 const phoneInput = document.getElementById('phone-number');
 const PHONE_NUMBER_LENGTH = 11;
+const overlay = document.querySelector('.overlay');
+const links = document.querySelectorAll('.site-list__link');
 
 navMain.classList.remove('main-nav--nojs');
 
@@ -31,11 +34,32 @@ navToggle.addEventListener('click', function () {
   if (navMain.classList.contains('main-nav--closed')) {
     navMain.classList.remove('main-nav--closed');
     navMain.classList.add('main-nav--opened');
+    overlay.classList.remove('visually-hidden');
+    body.classList.add('page__lock');
   } else {
     navMain.classList.add('main-nav--closed');
     navMain.classList.remove('main-nav--opened');
+    overlay.classList.add('visually-hidden');
+    body.classList.remove('page__lock');
   }
 });
+
+overlay.addEventListener('click', function () {
+  navMain.classList.add('main-nav--closed');
+  navMain.classList.remove('main-nav--opened');
+  overlay.classList.add('visually-hidden');
+  body.classList.remove('page__lock');
+});
+
+links.forEach((link) => {
+  link.addEventListener('click', function () {
+    navMain.classList.add('main-nav--closed');
+    navMain.classList.remove('main-nav--opened');
+    overlay.classList.add('visually-hidden');
+    body.classList.remove('page__lock');
+  });
+});
+
 
 phoneInput.addEventListener('input', () => {
   const valueLength = phoneInput.value.length;
