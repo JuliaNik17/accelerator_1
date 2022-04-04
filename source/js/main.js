@@ -23,8 +23,8 @@ window.addEventListener('DOMContentLoaded', () => {
 const body = document.querySelector('.page__body');
 const navMain = document.querySelector('.main-nav');
 const navToggle = document.querySelector('.main-nav__toggle');
-const phoneInput = document.getElementById('phone-number');
-const PHONE_NUMBER_LENGTH = 11;
+// const phoneInput = document.getElementById('phone-number');
+// const PHONE_NUMBER_LENGTH = 11;
 const overlay = document.querySelector('.overlay');
 const links = document.querySelectorAll('.site-list__link');
 
@@ -61,19 +61,19 @@ links.forEach((link) => {
 });
 
 
-phoneInput.addEventListener('input', () => {
-  const valueLength = phoneInput.value.length;
+// phoneInput.addEventListener('input', () => {
+//   const valueLength = phoneInput.value.length;
 
-  if (valueLength < PHONE_NUMBER_LENGTH) {
-    phoneInput.setCustomValidity('Введите номер телефона в формате: 88009202020');
-  } else if (valueLength > PHONE_NUMBER_LENGTH) {
-    phoneInput.setCustomValidity('Номер телефона не должен превышать 11 знаков');
-  } else {
-    phoneInput.setCustomValidity('');
-  }
+//   if (valueLength < PHONE_NUMBER_LENGTH) {
+//     phoneInput.setCustomValidity('Введите номер телефона в формате: 88009202020');
+//   } else if (valueLength > PHONE_NUMBER_LENGTH) {
+//     phoneInput.setCustomValidity('Номер телефона не должен превышать 11 знаков');
+//   } else {
+//     phoneInput.setCustomValidity('');
+//   }
 
-  phoneInput.reportValidty();
-});
+//   phoneInput.reportValidty();
+// });
 
 
 // ---------------------------------

@@ -9,6 +9,10 @@
   z-index: 2;
   overflow-y: auto;
 
+  &:focus-visible {
+    z-index: 10;
+  }
+
   @include vp-1023 {
     padding: 29px 20px 0 35px;
   }
@@ -71,6 +75,12 @@
   &:hover,
   &:focus {
     opacity: 0.8;
+  }
+
+  &:focus-visible .cruise-info,
+  &:active .cruise-info,
+  &:focus .cruise-info {
+    z-index: 10;
   }
 
   @include vp-1023 {

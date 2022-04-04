@@ -1154,7 +1154,9 @@ button,
   position: relative;
 }
 
+.cruise-list__item:focus-visible .cruise-info,
 .cruise-list__item:focus .cruise-info,
+.cruise-list__item:active .cruise-info,
 .cruise-list__item:hover .cruise-info {
   z-index: 10;
 }
@@ -1207,6 +1209,10 @@ button,
   padding-left: 27px;
   z-index: 2;
   overflow-y: auto;
+}
+
+.cruise-info:focus-visible {
+  z-index: 10;
 }
 
 .cruise-info h3 {
@@ -1267,6 +1273,12 @@ button,
 .cruise-info a:hover,
 .cruise-info a:focus {
   opacity: 0.8;
+}
+
+.cruise-info a:focus-visible .cruise-info,
+.cruise-info a:active .cruise-info,
+.cruise-info a:focus .cruise-info {
+  z-index: 10;
 }
 
 .booking {
@@ -1538,7 +1550,6 @@ button,
 }
 
 .contacts-list__item a {
-  display: block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;

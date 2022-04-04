@@ -33,7 +33,9 @@
   flex-direction: column;
   position: relative;
 
+  &:focus-visible .cruise-info,
   &:focus .cruise-info,
+  &:active .cruise-info,
   &:hover .cruise-info {
     z-index: 10;
   }
