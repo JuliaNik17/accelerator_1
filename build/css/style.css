@@ -812,10 +812,12 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  overflow: visible;
+  height: 40px;
 }
 
-.page-header img {
-  padding-left: 13px;
+.page-header__wrapper img {
+  padding-left: 15px;
 }
 
 .main-nav {
@@ -1157,6 +1159,7 @@ button,
 .cruise-list__item:focus-visible .cruise-info,
 .cruise-list__item:focus .cruise-info,
 .cruise-list__item:active .cruise-info,
+.cruise-list__item:focus-within .cruise-info,
 .cruise-list__item:hover .cruise-info {
   z-index: 10;
 }
@@ -1175,7 +1178,7 @@ button,
 }
 
 .cruise__card img {
-  width: 100%;
+  width: 100vw;
   height: 100%;
   min-width: none;
 }
@@ -1201,12 +1204,8 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
   background-color: #011c40;
   padding-top: 28px;
-  padding-left: 27px;
   z-index: 2;
   overflow-y: auto;
 }
@@ -1223,6 +1222,7 @@ button,
   color: #f9fbfd;
   margin: 0;
   margin-bottom: 14px;
+  padding-left: 27px;
 }
 
 .cruise-info__list {
@@ -1249,20 +1249,23 @@ button,
   color: #f9fbfd;
   margin-top: 0;
   margin-bottom: 11px;
+  padding-left: 27px;
 }
 
 .cruise-info a {
   display: block;
+  width: 85%;
   background-color: #f9fbfd;
   color: #011c40;
   font-family: "Montserrat", "Aial", sans-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
-  padding: 10px 47px 10px 46px;
-  margin: 0;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
+  padding: 10px 45px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  margin-left: 20px;
   margin-bottom: 35px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1273,12 +1276,6 @@ button,
 .cruise-info a:hover,
 .cruise-info a:focus {
   opacity: 0.8;
-}
-
-.cruise-info a:focus-visible .cruise-info,
-.cruise-info a:active .cruise-info,
-.cruise-info a:focus .cruise-info {
-  z-index: 10;
 }
 
 .booking {
@@ -1550,9 +1547,6 @@ button,
 }
 
 .contacts-list__item a {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   font-family: "Montserrat", "Arial", sans-serif;
   color: #011c40;
   font-weight: 400;
@@ -1590,6 +1584,7 @@ button,
 }
 
 .footer-list {
+  width: 85%;
   list-style: none;
   padding: 0;
   display: -webkit-box;
@@ -1598,7 +1593,7 @@ button,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0;
-  margin-left: 25px;
+  margin-left: 28px;
 }
 
 .footer-list__item {
@@ -1655,6 +1650,8 @@ button,
 .page-footer__nav img {
   display: block;
   margin-right: 15px;
+  width: 70px;
+  height: 38px;
 }
 
 .social__list {
@@ -1712,6 +1709,21 @@ button,
   }
 }
 
+@media (max-width: 1199px) {
+  .cruise-list {
+    -ms-grid-columns: 1fr 1fr 1fr ifr;
+    grid-template-columns: 1fr 1fr 1fr ifr;
+    -ms-grid-rows: 45vh 45vh;
+    grid-template-rows: 45vh 45vh;
+    grid-gap: 10px;
+    padding: 0 5px;
+  }
+
+  .cruise-info a {
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 1023px) {
   .container {
     padding: 0 24px;
@@ -1722,15 +1734,25 @@ button,
   }
 
   .page-header__wrapper {
-    margin: 30px auto;
+    width: 90%;
+    height: 30px;
+    overflow: visible;
+    margin: 29px auto 30px;
   }
 
-  .page-header img {
-    padding-left: 25px;
+  .page-header__wrapper img {
+    padding-left: 7px;
+    width: 45px;
+    height: 20px;
+  }
+
+  .main-nav {
+    width: 75%;
   }
 
   .main-nav__list {
-    margin: 0 10px 0 15px;
+    padding-left: 10px;
+    margin-left: 0;
   }
 
   .site-list__item {
@@ -1760,18 +1782,18 @@ button,
   .intro h2 {
     font-size: 50px;
     line-height: 61px;
-    margin-left: 7px;
-    margin-top: 267px;
+    margin-left: 0;
+    margin-top: 268px;
   }
 
   .intro p {
     font-size: 18px;
     line-height: 22px;
-    margin-left: 7px;
+    margin-left: 0;
   }
 
   .trips__wrapper {
-    width: 92%;
+    width: 88%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1795,7 +1817,7 @@ button,
   .trips__wrapper img {
     width: 324px;
     height: 264px;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
   }
 
   .trips-info {
@@ -1813,13 +1835,13 @@ button,
     font-size: 26px;
     line-height: 36px;
     margin-top: 8px;
-    margin-left: 15px;
+    margin-left: 0;
   }
 
   .trips-info p {
     width: 324px;
-    margin-top: 15px;
-    margin-left: 15px;
+    margin-top: 17px;
+    margin-left: 0;
   }
 
   .trips-info h2 br {
@@ -1836,13 +1858,14 @@ button,
     font-size: 26px;
     line-height: 39px;
     margin-top: 88px;
+    margin-left: 0;
   }
 
   .advantages__list {
-    width: 92%;
+    width: 88%;
     grid-gap: 30px;
     margin: 0 auto 100px;
-    padding-left: 15px;
+    padding-left: 0;
   }
 
   .option-list__item--ship::before {
@@ -1900,14 +1923,17 @@ button,
     font-size: 26px;
     line-height: 39px;
     margin-top: 90px;
+    padding-left: 0;
   }
 
   .cruise-list {
-    max-width: 658px;
+    max-width: 650px;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 386px 386px 386px 386px;
     grid-template-rows: 386px 386px 386px 386px;
+    padding-left: 0;
+    grid-gap: 30px;
   }
 
   .cruise__card h3 {
@@ -1916,11 +1942,18 @@ button,
   }
 
   .cruise-info {
-    padding: 29px 20px 0 35px;
+    padding: 29px 20px 0 10px;
+  }
+
+  .cruise-info__list {
+    margin-bottom: 15px;
   }
 
   .cruise-info a {
+    width: 86%;
     padding: 10px 62px;
+    margin-left: 15px;
+    text-align: center;
   }
 
   .booking {
@@ -1941,7 +1974,7 @@ button,
   }
 
   .booking-info {
-    padding-left: 15px;
+    padding-left: 0;
   }
 
   .booking-info h2 {
@@ -1958,7 +1991,7 @@ button,
   }
 
   .booking-form {
-    margin-left: 15px;
+    margin-left: 0;
     padding: 45px 50px 50px;
   }
 
@@ -2018,6 +2051,8 @@ button,
   }
 
   .contacts-list__item a {
+    display: inline-block;
+    width: 80%;
     padding-left: 29px;
   }
 
@@ -2040,7 +2075,7 @@ button,
   }
 
   .footer-list__item {
-    margin-top: 8px;
+    margin-top: 5px;
   }
 
   .footer-list__item a {
@@ -2051,13 +2086,19 @@ button,
   }
 
   .page-footer__wrapper {
-    padding-right: 12px;
+    padding-right: 10px;
     padding-left: 25px;
     margin: 40px auto 43px;
   }
 
+  .page-footer__nav {
+    width: 85%;
+  }
+
   .page-footer__nav img {
     margin-right: 25px;
+    width: 38px;
+    height: 20px;
   }
 
   .social__link--facebook {
@@ -2127,12 +2168,14 @@ button,
   }
 
   .page-header__wrapper {
+    width: 95%;
     max-width: none;
     margin: 0 auto;
     padding-top: 20px;
+    height: 42px;
   }
 
-  .page-header img {
+  .page-header__wrapper img {
     padding-left: 6px;
   }
 
@@ -2144,11 +2187,13 @@ button,
   }
 
   .main-nav__list {
+    width: 100%;
     background-color: #f9fbfd;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    margin-right: 0;
     margin-top: 75px;
     margin-left: 15px;
     margin-bottom: 300px;
@@ -2185,7 +2230,6 @@ button,
 
   .main-nav--opened .main-nav__list {
     display: block;
-    width: 285px;
   }
 
   .main-nav--nojs {
@@ -2199,6 +2243,8 @@ button,
   .main-nav--nojs .main-nav__wrapper {
     position: relative;
     width: 100%;
+    height: 568px;
+    overflow-y: scroll;
   }
 
   .main-nav--nojs .main-nav__list {
@@ -2227,6 +2273,8 @@ button,
     z-index: 3;
     width: 90%;
     background-color: #f9fbfd;
+    height: 100vh;
+    overflow-y: scroll;
   }
 
   .main-nav--nojs .main-nav__wrapper::before,
@@ -2254,6 +2302,7 @@ button,
 
   .site-list__item {
     margin-bottom: 0;
+    width: 100%;
   }
 
   .site-list__item a {
@@ -2301,14 +2350,15 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-left: 2px;
-    margin: 50px auto 58px;
+    width: 90%;
+    margin: 50px auto 65px;
     grid-gap: unset;
   }
 
   .trips__wrapper img {
     width: 290px;
     height: 186px;
+    margin-bottom: 0;
   }
 
   .trips-info {
@@ -2325,6 +2375,7 @@ button,
   .trips-info p {
     width: 100%;
     margin-left: 0;
+    margin-top: 15px;
   }
 
   .trips-info__tablet {
@@ -2361,7 +2412,7 @@ button,
     grid-template-columns: 1fr;
     -ms-grid-rows: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    margin: 0 0 65px;
+    margin: 0 0 67px;
     padding-left: 0;
   }
 
@@ -2369,8 +2420,12 @@ button,
     top: 33px;
   }
 
+  .option-list__item--boat {
+    padding-top: 64px;
+  }
+
   .option-list h3 {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 
   .option-list__item--all-inclusive h3 {
@@ -2409,15 +2464,15 @@ button,
     font-size: 24px;
     line-height: 36px;
     padding-left: 0;
-    margin-top: 57px;
+    margin-top: 56px;
     margin-bottom: 30px;
   }
 
   .cruise-list {
     width: 270px;
     padding-left: 0;
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 270px;
+    grid-template-columns: 270px;
     -ms-grid-rows: 386px 386px 386px 386px 386px 386px 386px 386px;
     grid-template-rows: 386px 386px 386px 386px 386px 386px 386px 386px;
   }
@@ -2431,7 +2486,22 @@ button,
     padding: 29px 20px 0 25px;
   }
 
+  .cruise-info h3 {
+    padding-left: 0;
+  }
+
+  .cruise-info__list {
+    margin-bottom: 18px;
+  }
+
+  .cruise-info__item p {
+    padding-left: 0;
+  }
+
   .cruise-info a {
+    width: 98%;
+    margin-left: 0;
+    margin-right: 5px;
     padding: 10px 52px;
   }
 
@@ -2506,6 +2576,7 @@ button,
 
   .booking-form__item input {
     padding-right: 7px;
+    padding-bottom: 10px;
     width: 100%;
   }
 
@@ -2518,11 +2589,11 @@ button,
 
   .agreement-checkbox + label::before {
     left: 1px;
-    top: 4px;
+    top: 1px;
   }
 
   .send-button {
-    margin-top: 30px;
+    margin-top: 29px;
     padding: 12px 53px 11px;
     width: 100%;
   }
@@ -2533,7 +2604,7 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     width: 90%;
-    margin: 60px auto 65px;
+    margin: 58px auto 65px;
   }
 
   .contacts__map {
@@ -2574,6 +2645,7 @@ button,
 
   .contacts-list__item a {
     padding-left: 28px;
+    width: 100%;
   }
 
   .footer-list {
@@ -2581,8 +2653,13 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin-top: 15px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 18px;
+  }
+
+  .footer-list__item {
+    margin-top: 3px;
+    margin-bottom: 9px;
   }
 
   .footer-list__item a {
@@ -2621,6 +2698,8 @@ button,
     -ms-flex-item-align: start;
     align-self: flex-start;
     margin: 0;
+    width: 42px;
+    height: 22px;
   }
 
   .social__link--facebook {

@@ -23,9 +23,10 @@ window.addEventListener('DOMContentLoaded', () => {
 const body = document.querySelector('.page__body');
 const navMain = document.querySelector('.main-nav');
 const navToggle = document.querySelector('.main-nav__toggle');
-// const phoneInput = document.getElementById('phone-number');
+const phoneInput = document.querySelector('.phone-number');
 // const PHONE_NUMBER_LENGTH = 11;
 const overlay = document.querySelector('.overlay');
+const overlayImg = document.querySelector('.overlay__img');
 const links = document.querySelectorAll('.site-list__link');
 
 navMain.classList.remove('main-nav--nojs');
@@ -35,11 +36,13 @@ navToggle.addEventListener('click', function () {
     navMain.classList.remove('main-nav--closed');
     navMain.classList.add('main-nav--opened');
     overlay.classList.remove('visually-hidden');
+    overlayImg.classList.remove('visually-hidden');
     body.classList.add('page__lock');
   } else {
     navMain.classList.add('main-nav--closed');
     navMain.classList.remove('main-nav--opened');
     overlay.classList.add('visually-hidden');
+    overlayImg.classList.add('visually-hidden');
     body.classList.remove('page__lock');
   }
 });
@@ -48,6 +51,7 @@ overlay.addEventListener('click', function () {
   navMain.classList.add('main-nav--closed');
   navMain.classList.remove('main-nav--opened');
   overlay.classList.add('visually-hidden');
+  overlayImg.classList.add('visually-hidden');
   body.classList.remove('page__lock');
 });
 
@@ -56,24 +60,23 @@ links.forEach((link) => {
     navMain.classList.add('main-nav--closed');
     navMain.classList.remove('main-nav--opened');
     overlay.classList.add('visually-hidden');
+    overlayImg.classList.add('visually-hidden');
     body.classList.remove('page__lock');
   });
 });
 
 
-// phoneInput.addEventListener('input', () => {
-//   const valueLength = phoneInput.value.length;
+phoneInput.addEventListener('input', () => {
+  const phoneValue = parseInt(phoneInput.value, 10);
 
-//   if (valueLength < PHONE_NUMBER_LENGTH) {
-//     phoneInput.setCustomValidity('Введите номер телефона в формате: 88009202020');
-//   } else if (valueLength > PHONE_NUMBER_LENGTH) {
-//     phoneInput.setCustomValidity('Номер телефона не должен превышать 11 знаков');
-//   } else {
-//     phoneInput.setCustomValidity('');
-//   }
+  if (!Number.isInteger(phoneValue)) {
+    phoneInput.setCustomValidity('Введите номер телефона (только цифры)');
+  } else {
+    phoneInput.setCustomValidity('');
+  }
 
-//   phoneInput.reportValidty();
-// });
+  phoneInput.reportValidity();
+});
 
 
 // ---------------------------------

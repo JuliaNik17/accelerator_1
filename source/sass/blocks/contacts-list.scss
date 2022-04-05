@@ -4,7 +4,6 @@
 }
 
 .contacts-list__item a {
-  width: fit-content;
   font-family: "Montserrat", "Arial", sans-serif;
   color: $dark-blue;
   font-weight: 400;
@@ -17,11 +16,14 @@
   }
 
   @include vp-1023 {
+    display: inline-block;
+    width: 80%;
     padding-left: 29px;
   }
 
   @include vp-767 {
     padding-left: 28px;
+    width: 100%;
   }
 }
 

@@ -66,8 +66,8 @@
   @include vp-1023 {
     font-size: 50px;
     line-height: 61px;
-    margin-left: 7px;
-    margin-top: 267px;
+    margin-left: 0;
+    margin-top: 268px;
   }
 
   @include vp-767 {
@@ -91,7 +91,7 @@
   @include vp-1023 {
     font-size: 18px;
     line-height: 22px;
-    margin-left: 7px;
+    margin-left: 0;
   }
 
   @include vp-767 {

@@ -18,8 +18,8 @@
   }
 }
 
-@mixin vp-1279 {
-  @media (max-width: $vp-1280 - 1) {
+@mixin vp-1119 {
+  @media (max-width: $vp-1200 - 1) {
     @content;
   }
 }

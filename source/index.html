@@ -12,7 +12,9 @@
   <body class="page__body">
     <div class="wrapper">
       <header class="page-header">
-        <div class="overlay visually-hidden"></div>
+        <div class="overlay visually-hidden">
+          <img src="img/content/main_picture_mob.jpg" width="320" height="500" alt="Море" class="overlay__img visually-hidden">
+        </div>
         <div class="page-header__wrapper">
           <a class="page-header__logo">
             <picture>
@@ -391,7 +393,7 @@
                     </li>
                     <li class="booking-form__item">
                       <label for="phone-number" class="visually-hidden">Телефон</label>
-                      <input type="number" name="phone-number" id="phone-number" placeholder="Телефон" required>
+                      <input type="tel" name="phone-number" id="phone-number" placeholder="Телефон" required class="phone-number">
                     </li>
                     <li class="booking-form__item">
                       <label for="email" class="visually-hidden">Адрес электронной почты</label>

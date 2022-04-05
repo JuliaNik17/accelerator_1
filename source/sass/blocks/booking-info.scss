@@ -4,7 +4,7 @@
   padding-left: 47px;
 
   @include vp-1023 {
-    padding-left: 15px;
+    padding-left: 0;
   }
 
   @include vp-767 {

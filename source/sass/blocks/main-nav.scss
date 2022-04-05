@@ -2,7 +2,7 @@
   align-self: center;
 
   @include vp-1023 {
-    // width: 80%;
+    width: 75%;
   }
 
   @include vp-767 {
@@ -21,12 +21,15 @@
   flex-wrap: wrap;
 
   @include vp-1023 {
-    margin: 0 10px 0 15px;
+    padding-left: 10px;
+    margin-left: 0;
   }
 
   @include vp-767 {
+    width: 100%;
     background-color: $light-beige;
     flex-direction: column;
+    margin-right: 0;
     margin-top: 75px;
     margin-left: 15px;
     margin-bottom: 300px;
@@ -72,7 +75,6 @@
 .main-nav--opened .main-nav__list {
   @include vp-767 {
     display: block;
-    width: 285px;
   }
 }
 
@@ -94,6 +96,8 @@
   @include vp-767 {
     position: relative;
     width: 100%;
+    height: 568px;
+    overflow-y: scroll;
   }
 }
 
@@ -124,6 +128,8 @@
     z-index: 3;
     width: 90%;
     background-color: $light-beige;
+    height: 100vh;
+    overflow-y: scroll;
   }
 }
 

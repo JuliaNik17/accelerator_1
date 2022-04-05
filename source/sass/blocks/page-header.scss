@@ -19,26 +19,32 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  overflow: visible;
+  height: 40px;
 
   @include vp-1023 {
-    // max-width: 690px;
-    margin: 30px auto;
+    width: 90%;
+    height: 30px;
+    overflow: visible;
+    margin: 29px auto 30px;
   }
 
   @include vp-767 {
-    // width: 100%;
+    width: 95%;
     max-width: none;
     margin: 0 auto;
     padding-top: 20px;
-    // height: 20px;
+    height: 42px;
   }
 }
 
-.page-header img {
-  padding-left: 13px;
+.page-header__wrapper img {
+  padding-left: 15px;
 
   @include vp-1023 {
-    padding-left: 25px;
+    padding-left: 7px;
+    width: 45px;
+    height: 20px;
   }
 
   @include vp-767 {
