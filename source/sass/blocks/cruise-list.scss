@@ -6,15 +6,13 @@
   padding-left: 11px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  // grid-template-rows: 45vh 45vh;
   grid-template-rows: 386px 386px;
   grid-gap: 30px;
 
   @include vp-1119 {
     grid-template-columns: 1fr 1fr 1fr ifr;
-    grid-template-rows: 45vh 45vh;
     grid-gap: 10px;
-    padding: 0 5px;
+    padding: 0 15px;
   }
 
   @include vp-1023 {

@@ -38,6 +38,14 @@
   }
 }
 
+.page-header__wrapper a {
+  width: 10%;
+
+  @include vp-767 {
+    width: 30%;
+  }
+}
+
 .page-header__wrapper img {
   padding-left: 15px;
 

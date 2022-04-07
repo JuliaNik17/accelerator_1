@@ -2,10 +2,15 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  @include vp-767 {
+    margin-top: 0;
+  }
 }
 
 .social a {
