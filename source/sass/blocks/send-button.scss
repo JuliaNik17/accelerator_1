@@ -8,7 +8,7 @@
   font-size: 14px;
   line-height: 21px;
   padding: 10px 87px 11px;
-  margin-top: 38px;
+  margin-top: 30px;
   user-select: none;
   cursor: pointer;
 
@@ -18,6 +18,7 @@
 
   @include vp-1023 {
     padding: 11px 89px 11px 90px;
+    margin-top: 23px;
   }
 
   @include vp-767 {

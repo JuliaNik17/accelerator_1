@@ -1418,16 +1418,14 @@ button,
 }
 
 .booking-form__agreement p {
-  width: 281px;
+  width: 100%;
   padding-left: 20px;
   font-family: "Montserrat", "Arial", sans-serif;
   color: #f9fbfd;
   font-weight: 400;
   font-size: 5px;
-  line-height: 3px;
-  letter-spacing: -2.5px;
+  line-height: 8px;
   margin: 0;
-  margin-top: 5px;
 }
 
 .booking-form__agreement br {
@@ -1470,7 +1468,7 @@ button,
   font-size: 14px;
   line-height: 21px;
   padding: 10px 87px 11px;
-  margin-top: 38px;
+  margin-top: 30px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1943,7 +1941,7 @@ button,
     grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 386px 386px 386px 386px;
     grid-template-rows: 386px 386px 386px 386px;
-    padding-left: 0;
+    padding: 0;
     grid-gap: 30px;
   }
 
@@ -2020,6 +2018,7 @@ button,
 
   .send-button {
     padding: 11px 89px 11px 90px;
+    margin-top: 23px;
   }
 
   .contacts__wrapper {
@@ -2372,7 +2371,7 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     width: 90%;
-    margin: 50px auto 65px;
+    margin: 48px auto 65px;
     grid-gap: unset;
   }
 
