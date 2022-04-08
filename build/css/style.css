@@ -1385,7 +1385,7 @@ button,
   display: none;
 }
 
-.booking-form fieldset {
+.booking-form__data {
   border: none;
   margin: 0;
   padding: 0;
@@ -1395,10 +1395,15 @@ button,
   list-style: none;
   padding-left: 0;
   margin-top: 27px;
+  margin-bottom: 0;
 }
 
 .booking-form__item {
   margin-bottom: 20px;
+}
+
+.booking-form__item:nth-child(3n) {
+  margin-bottom: 0;
 }
 
 .booking-form__item input {
@@ -1413,18 +1418,27 @@ button,
   padding: 13px 80px 10px 16px;
 }
 
+.booking-form__agreement {
+  border: none;
+  margin: 0;
+  padding: 19px 0 5px;
+}
+
 .booking-form__agreement label {
   position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .booking-form__agreement p {
-  width: 100%;
-  padding-left: 20px;
+  padding-left: 25px;
   font-family: "Montserrat", "Arial", sans-serif;
   color: #f9fbfd;
   font-weight: 400;
-  font-size: 5px;
-  line-height: 8px;
+  font-size: 10px;
+  line-height: 13px;
   margin: 0;
 }
 
@@ -1440,6 +1454,7 @@ button,
   height: 18px;
   left: 0;
   background-color: #f9fbfd;
+  top: 0;
 }
 
 .agreement-checkbox:checked + label::before {
@@ -1468,7 +1483,7 @@ button,
   font-size: 14px;
   line-height: 21px;
   padding: 10px 87px 11px;
-  margin-top: 30px;
+  margin-top: 17px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -2008,17 +2023,13 @@ button,
     padding: 12px 82px 9px 16px;
   }
 
-  .booking-form__agreement p {
-    margin-top: 10px;
-  }
-
   .agreement-checkbox + label::before {
     left: 0;
   }
 
   .send-button {
     padding: 11px 89px 11px 90px;
-    margin-top: 23px;
+    margin-top: 20px;
   }
 
   .contacts__wrapper {
@@ -2600,20 +2611,22 @@ button,
     width: 100%;
   }
 
+  .booking-form__agreement {
+    padding-top: 22px;
+  }
+
   .booking-form__agreement p {
     line-height: 80%;
-    letter-spacing: -0.5px;
     padding-left: 25px;
     margin-top: 0;
   }
 
   .agreement-checkbox + label::before {
     left: 1px;
-    top: 1px;
   }
 
   .send-button {
-    margin-top: 29px;
+    margin-top: 22px;
     padding: 12px 53px 11px;
     width: 100%;
   }

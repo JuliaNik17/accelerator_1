@@ -55,7 +55,7 @@
   }
 }
 
-.booking-form fieldset {
+.booking-form__data {
   border: none;
   margin: 0;
   padding: 0;
@@ -65,10 +65,15 @@
   list-style: none;
   padding-left: 0;
   margin-top: 27px;
+  margin-bottom: 0;
 }
 
 .booking-form__item {
   margin-bottom: 20px;
+}
+
+.booking-form__item:nth-child(3n) {
+  margin-bottom: 0;
 }
 
 .booking-form__item input {
@@ -94,30 +99,42 @@
   }
 }
 
+.booking-form__agreement {
+  border: none;
+  margin: 0;
+  padding: 19px 0 5px;
+
+  @include vp-767 {
+    padding-top: 22px;
+  }
+}
+
 .booking-form__agreement label {
   position: relative;
+  width: 100%;
+  display: flex;
+  // padding: 20px 0 5px;
 }
 
 .booking-form__agreement p {
   // width: 281px;
-  width: 100%;
-  padding-left: 20px;
+  padding-left: 25px;
   font-family: "Montserrat", "Arial", sans-serif;
   color: $light-beige;
   font-weight: 400;
-  font-size: 5px;
-  line-height: 8px;
+  font-size: 10px;
+  line-height: 13px;
   // letter-spacing: -0.4em;
   margin: 0;
   // margin-top: 5px;
 
   @include vp-1023 {
-    margin-top: 10px;
+    // margin-top: 10px;
   }
 
   @include vp-767 {
     line-height: 80%;
-    letter-spacing: -0.5px;
+    // letter-spacing: -0.5px;
     padding-left: 25px;
     margin-top: 0;
   }
